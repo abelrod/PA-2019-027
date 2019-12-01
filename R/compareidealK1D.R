@@ -11,10 +11,7 @@ compareidealK1D <- function(votes, missing, group, demleader, repleader, nsample
     group      = as.matrix(group)
     samplezeta = as.numeric(samplezeta)
     ngroups    = length(unique(group))
-    
-    
-    print(is.integer(nsamples))
-    
+        
     if(ngroups!=(max(group)+1))   stop("groups must be labeled continuously starting at 0")
     if(any(dim(missing)!=dim(y))) stop("The dimensions of votes and missing must match")
     if(dim(y)[2]!=length(group))  stop("The length of groups does not match the number of votes")
